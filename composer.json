@@ -1,11 +1,15 @@
 {
     "name": "wnx/faker-swiss-cities",
-    "description": "This is my package faker-swiss-cities",
+    "description": "Provider to generate valid Swiss location data for Faker PHP. ",
     "keywords": [
         "wnx",
-        "faker-swiss-cities"
+        "faker",
+        "switzerland",
+        "swiss",
+        "cities",
+        "fake-data"
     ],
-    "homepage": "https://github.com/wnx/faker-swiss-cities",
+    "homepage": "https://github.com/stefanzweifel/faker-swiss-cities",
     "license": "MIT",
     "authors": [
         {
@@ -19,8 +23,7 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
-        "pestphp/pest": "^1.20",
-        "spatie/ray": "^1.28"
+        "pestphp/pest": "^1.20"
     },
     "autoload": {
         "psr-4": {
