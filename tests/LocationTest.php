@@ -24,13 +24,15 @@ it('returns location instance with a canton instance from the location method', 
 it('returns valid swiss postcode', function () {
     $zipcode = $this->faker->postcode();
 
+    $this->assertMatchesRegularExpression('/^[0-9]{4}$/', $zipcode);
+
     expect($zipcode)
         ->toBeString()
         ->and(strlen($zipcode))
         ->toBe(4);
 });
 
-it('returns valid swiss city', function () {
+it('returns swiss city from city method', function () {
     $city = $this->faker->city();
 
     expect($city)
@@ -39,7 +41,7 @@ it('returns valid swiss city', function () {
         ->toBeGreaterThan(0);
 });
 
-it('return valid swiss canton', function () {
+it('return swiss canton from canton menthod', function () {
     $canton = $this->faker->canton();
 
     expect($canton)
