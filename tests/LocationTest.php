@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Faker\Factory;
 use Wnx\FakerSwissCities\Provider\Location;
 use Wnx\SwissCantons\Canton;

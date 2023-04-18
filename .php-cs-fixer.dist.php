@@ -10,6 +10,7 @@ $finder = Symfony\Component\Finder\Finder::create()
     ->ignoreVCS(true);
 
 return (new PhpCsFixer\Config())
+    ->setRiskyAllowed(true)
     ->setRules([
         '@PSR12' => true,
         'array_syntax' => ['syntax' => 'short'],
@@ -35,5 +36,6 @@ return (new PhpCsFixer\Config())
             'keep_multiple_spaces_after_comma' => true,
         ],
         'single_trait_insert_per_statement' => true,
+        'declare_strict_types' => true,
     ])
     ->setFinder($finder);

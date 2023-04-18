@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Wnx\FakerSwissCities\Provider;
 
 use Faker\Provider\Base;
@@ -26,7 +28,7 @@ class Location extends Base
         $canton = $cantonManager->getByAbbreviation($randomLocation['canton']);
 
         return new \Wnx\FakerSwissCities\Location(
-            $randomLocation['zipcode'],
+            (string) $randomLocation['zipcode'],
             $randomLocation['city'],
             $canton,
         );
@@ -38,7 +40,7 @@ class Location extends Base
      */
     public function postcode(): string
     {
-        return $this->location()->postcode;
+        return (string) $this->location()->postcode;
     }
 
     /**

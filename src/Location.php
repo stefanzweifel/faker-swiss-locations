@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Wnx\FakerSwissCities;
 
 use Wnx\SwissCantons\Canton;
@@ -7,7 +9,7 @@ use Wnx\SwissCantons\Canton;
 readonly class Location
 {
     public function __construct(
-        public int $postcode,
+        public string $postcode,
         public string $city,
         public Canton $canton
     ) {
