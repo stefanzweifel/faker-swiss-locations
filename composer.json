@@ -14,7 +14,7 @@
     "authors": [
         {
             "name": "Stefan Zweifel",
-            "email": "hello@stefanzweifel.io",
+            "email": "stefan@stefanzweifel.dev",
             "role": "Developer"
         }
     ],
@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Wnx\\FakerSwissCities\\": "src"
+            "Wnx\\FakerSwissLocations\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Wnx\\FakerSwissCities\\Tests\\": "tests"
+            "Wnx\\FakerSwissLocations\\Tests\\": "tests"
         }
     },
     "scripts": {

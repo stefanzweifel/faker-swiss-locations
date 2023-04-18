@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Wnx\FakerSwissCities\Provider;
+namespace Wnx\FakerSwissLocations\Provider;
 
 use Faker\Provider\Base;
 use JsonException;
@@ -13,11 +13,13 @@ use Wnx\SwissCantons\ZipcodeSearch;
 
 class Location extends Base
 {
+    protected \Wnx\FakerSwissLocations\Location $location;
+
     /**
      * @throws CantonException
      * @throws JsonException
      */
-    public function location(): \Wnx\FakerSwissCities\Location
+    public function location(): \Wnx\FakerSwissLocations\Location
     {
         $zipcodeSearch = new ZipcodeSearch();
         $zipcodeDataSet = $zipcodeSearch->getDataSet();
@@ -27,7 +29,7 @@ class Location extends Base
         $cantonManager = new CantonManager();
         $canton = $cantonManager->getByAbbreviation($randomLocation['canton']);
 
-        return new \Wnx\FakerSwissCities\Location(
+        return new \Wnx\FakerSwissLocations\Location(
             (string) $randomLocation['zipcode'],
             $randomLocation['city'],
             $canton,

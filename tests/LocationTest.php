@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Faker\Factory;
-use Wnx\FakerSwissCities\Provider\Location;
+use Wnx\FakerSwissLocations\Provider\Location;
 use Wnx\SwissCantons\Canton;
 
 beforeEach(function () {
@@ -14,11 +14,11 @@ beforeEach(function () {
 });
 
 it('returns location instance with a canton instance from the location method', function () {
-    /** @var \Wnx\FakerSwissCities\Location $location */
+    /** @var \Wnx\FakerSwissLocations\Location $location */
     $location = $this->faker->location();
 
     expect($location)
-        ->toBeInstanceOf(\Wnx\FakerSwissCities\Location::class)
+        ->toBeInstanceOf(\Wnx\FakerSwissLocations\Location::class)
         ->and($location->canton)
         ->toBeInstanceOf(Canton::class);
 });

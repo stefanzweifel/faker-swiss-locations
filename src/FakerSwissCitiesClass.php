@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Wnx\FakerSwissCities;
+namespace Wnx\FakerSwissLocations;
 
 class FakerSwissCitiesClass
 {
