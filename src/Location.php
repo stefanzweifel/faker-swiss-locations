@@ -4,12 +4,12 @@ namespace Wnx\FakerSwissCities;
 
 use Wnx\SwissCantons\Canton;
 
-class Location
+readonly class Location
 {
     public function __construct(
-        public readonly int $postcode,
-        public readonly string $city,
-        public readonly Canton $canton
+        public int $postcode,
+        public string $city,
+        public Canton $canton
     ) {
     }
 }

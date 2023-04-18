@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "fakerphp/faker": "^1.20",
         "wnx/php-swiss-cantons": "^4.1"
     },
