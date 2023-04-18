@@ -1,8 +1,8 @@
-# This is my package faker-swiss-cities
+# faker-swiss-locations
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/wnx/faker-swiss-cities.svg?style=flat-square)](https://packagist.org/packages/wnx/faker-swiss-cities)
-[![Tests](https://github.com/stefanzweifel/faker-swiss-cities/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/stefanzweifel/faker-swiss-cities/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/wnx/faker-swiss-cities.svg?style=flat-square)](https://packagist.org/packages/wnx/faker-swiss-cities)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/wnx/faker-swiss-locations.svg?style=flat-square)](https://packagist.org/packages/wnx/faker-swiss-locations)
+[![Tests](https://github.com/stefanzweifel/faker-swiss-locations/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/stefanzweifel/faker-swiss-locations/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/wnx/faker-swiss-locations.svg?style=flat-square)](https://packagist.org/packages/wnx/faker-swiss-locations)
 
 This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
 
@@ -11,7 +11,7 @@ This is where your description should go. Try and limit it to a paragraph or two
 You can install the package via composer:
 
 ```bash
-composer require wnx/faker-swiss-cities
+composer require wnx/faker-swiss-locations
 ```
 
 ## Usage

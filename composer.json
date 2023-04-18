@@ -1,5 +1,5 @@
 {
-    "name": "wnx/faker-swiss-cities",
+    "name": "wnx/faker-swiss-locations",
     "description": "Provider to generate valid Swiss location data for Faker PHP. ",
     "keywords": [
         "wnx",
@@ -9,7 +9,7 @@
         "cities",
         "fake-data"
     ],
-    "homepage": "https://github.com/stefanzweifel/faker-swiss-cities",
+    "homepage": "https://github.com/stefanzweifel/faker-swiss-locations",
     "license": "MIT",
     "authors": [
         {
