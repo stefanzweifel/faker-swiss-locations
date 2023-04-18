@@ -12,20 +12,18 @@ class Location extends Base
     public function location(): \Wnx\FakerSwissCities\Location
     {
         $zipcodeSearch = new ZipcodeSearch();
-        $data = $zipcodeSearch->getDataSet();
+        $zipcodeDataSet = $zipcodeSearch->getDataSet();
 
-        $randomLocation = static::randomElement($data);
+        $randomLocation = static::randomElement($zipcodeDataSet);
 
         $cantonManager = new CantonManager();
         $canton = $cantonManager->getByAbbreviation($randomLocation['canton']);
 
-        $location = new \Wnx\FakerSwissCities\Location(
+        return new \Wnx\FakerSwissCities\Location(
             $randomLocation['zipcode'],
             $randomLocation['city'],
             $canton,
         );
-
-        return $location;
     }
 
     public function postcode(): string
