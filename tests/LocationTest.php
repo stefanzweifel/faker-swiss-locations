@@ -49,3 +49,11 @@ it('return swiss canton from canton menthod', function () {
     expect($canton)
         ->toBeInstanceOf(Canton::class);
 });
+
+it('can be used with unique', function () {
+    $cityA = $this->faker->unique()->city();
+    $cityB = $this->faker->unique()->city();
+
+    expect($cityA)
+        ->not->toBe($cityB);
+});
