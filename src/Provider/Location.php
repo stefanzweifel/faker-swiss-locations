@@ -13,8 +13,6 @@ use Wnx\SwissCantons\ZipcodeSearch;
 
 class Location extends Base
 {
-    protected \Wnx\FakerSwissLocations\Location $location;
-
     /**
      * @throws CantonException
      * @throws JsonException
