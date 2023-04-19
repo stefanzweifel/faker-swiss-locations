@@ -38,13 +38,19 @@ $faker->city();
 
 // Instance of Wnx\SwissCantons\Canton
 $faker->canton();
+$faker->canton()->getName(); // Zürich
+$faker->canton()->getAbbreviation(); // ZH
 ```
 
 Or you can call the `location()` method to get a `\Wnx\FakerSwissLocations\Location`-instance. You can access postcode, city and canton from this object too.
 
 ```php
 // Instance of \Wnx\FakerSwissLocations\Location
-$faker->location();
+$location = $faker->location();
+
+$location->postcode; // 8000
+$location->city; // Zürich
+$location->canton; // Instance of Wnx\SwissCantons\Canton
 ```
 
 ## Testing
