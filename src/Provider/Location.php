@@ -22,6 +22,10 @@ class Location extends Base
         $zipcodeSearch = new ZipcodeSearch();
         $zipcodeDataSet = $zipcodeSearch->getDataSet();
 
+        $zipcodeDataSet = array_filter($zipcodeDataSet, function ($zipcode) {
+            return ! in_array($zipcode['canton'], ['DE', 'IT']);
+        });
+
         $randomLocation = static::randomElement($zipcodeDataSet);
 
         $cantonManager = new CantonManager();
