@@ -8,25 +8,25 @@ use Faker\Provider\Base;
 use JsonException;
 use Wnx\SwissCantons\Canton;
 use Wnx\SwissCantons\CantonManager;
-use Wnx\SwissCantons\Exceptions\CantonException;
-use Wnx\SwissCantons\ZipcodeSearch;
+use Wnx\SwissCantons\CitySearch;
+use Wnx\SwissCantons\Exceptions\CantonNotFoundException;
 
 class Location extends Base
 {
     /**
-     * @throws CantonException
      * @throws JsonException
+     * @throws CantonNotFoundException
      */
     public function location(): \Wnx\FakerSwissLocations\Location
     {
-        $zipcodeSearch = new ZipcodeSearch();
-        $zipcodeDataSet = $zipcodeSearch->getDataSet();
+        $citySearch = new CitySearch();
+        $cityDataSet = $citySearch->getDataSet();
 
-        $zipcodeDataSet = array_filter($zipcodeDataSet, function ($zipcode) {
+        $cityDataSet = array_filter($cityDataSet, function ($zipcode) {
             return ! in_array($zipcode['canton'], ['DE', 'IT']);
         });
 
-        $randomLocation = static::randomElement($zipcodeDataSet);
+        $randomLocation = static::randomElement($cityDataSet);
 
         $cantonManager = new CantonManager();
         $canton = $cantonManager->getByAbbreviation($randomLocation['canton']);
@@ -39,7 +39,6 @@ class Location extends Base
     }
 
     /**
-     * @throws CantonException
      * @throws JsonException
      */
     public function postcode(): string
@@ -48,7 +47,6 @@ class Location extends Base
     }
 
     /**
-     * @throws CantonException
      * @throws JsonException
      */
     public function city(): string
@@ -57,7 +55,6 @@ class Location extends Base
     }
 
     /**
-     * @throws CantonException
      * @throws JsonException
      */
     public function canton(): Canton
