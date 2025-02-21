@@ -9,7 +9,6 @@ use JsonException;
 use Wnx\SwissCantons\Canton;
 use Wnx\SwissCantons\CantonManager;
 use Wnx\SwissCantons\CitySearch;
-use Wnx\SwissCantons\Exceptions\CantonException;
 use Wnx\SwissCantons\Exceptions\CantonNotFoundException;
 
 class Location extends Base
